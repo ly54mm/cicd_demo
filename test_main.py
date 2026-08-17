@@ -8,4 +8,4 @@ def test_read_root():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json() == {"message": "CI/CD is working!"}
+    assert response.json() == {"message": "CI/CD fully automated!"}
