@@ -9,3 +9,9 @@ def test_read_root():
 
     assert response.status_code == 200
     assert response.json() == {"message": "CI/CD fully automated!"}
+
+def test_health():
+    response = client.get("/health")
+
+    assert response.status_code == 200
+    assert response.json() == {"status": "ok"}
